@@ -1,33 +1,40 @@
-import React, { Component, PropsWithChildren, useContext, useEffect } from 'react'
-import { View, Text, TouchableOpacity, Image, StyleSheet, ScrollView } from 'react-native';
-import { Dimensions } from 'react-native';
+import React from 'react'
+import { View,  ScrollView } from 'react-native';
+import { StackNavigationProp } from '@react-navigation/stack'
+import { useNavigation } from '@react-navigation/native';
 import { Product } from '../Product';
-
-const window = Dimensions.get('window');
+import { styles } from './styles';
 
 
 type ListProductProps = {
   data: Array<Object>,
-  horizontal: boolean
+  horizontal: boolean,
+}
+export type RootStackParamList = {
+  ProductDetails: { tittle: string, price: string, photo: string } | undefined,
 }
 
-const Products = (data: any,children:any) => {
-  const { child } = styles;
-  return (
-    <View key={data.id} style={child}>
-      <Product
-        name={data.tittle}
-        value={data.price}
-        imageValue={data.picture}
-      />
-    </View>
-
-  )
-}
-export const ListProducts: React.FC<PropsWithChildren<ListProductProps>> = ({
+export const ListProducts: React.FC<ListProductProps> = ({
   data,
   horizontal,
-}) => {
+},
+) => {
+  const navigation = useNavigation<StackNavigationProp<RootStackParamList>>()
+
+  const Products = (data:any) => {
+    const { child } = styles;
+    return (
+      <View key={data.id} style={child}>
+        <Product
+          name={data.tittle}
+          value={data.price}
+          imageValue={data.picture}
+          onpress={() => navigation.navigate('ProductDetails', { tittle: data.tittle, price: data.price, photo: data.picture })}
+        />
+      </View>
+
+    )
+  }
   const productsView = data.map(Products);
   return (
     <ScrollView
@@ -38,18 +45,6 @@ export const ListProducts: React.FC<PropsWithChildren<ListProductProps>> = ({
   )
 
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-  },
-  child: {
-    width: window.width / 2 - 10,
-    alignItems: 'center',
-    marginBottom: 25
-  },
-});
 
 
 

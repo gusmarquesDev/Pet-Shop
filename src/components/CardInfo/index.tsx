@@ -1,42 +1,43 @@
-import React, { PropsWithChildren, useContext } from 'react'
-import { View, Text, TouchableOpacity, Image,ImageURISource } from 'react-native'
+import React from 'react'
+import { View, Text, TouchableOpacity, Image, ImageURISource } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons'
-import { ContentCard, Title,SubTitle } from './styles'
+import { ContentCard, Title, SubTitle } from './styles'
 
 type CardInfoProps = {
-title:string,
-subTitle:string,
-onpress?:any,
-imageValue:ImageURISource,
+  title: string,
+  subTitle: string,
+  onpress?: () => void,
+  imageValue: ImageURISource,
 }
-export const CardInfo: React.FC<PropsWithChildren<CardInfoProps>> = ({
-title,
-subTitle,
-onpress,
-imageValue
+export const CardInfo: React.FC<CardInfoProps> = ({
+  title,
+  subTitle,
+  onpress,
+  imageValue
 }) => {
   return (
     <>
-    <TouchableOpacity
-    style={{}}
-    >
-      <ContentCard>
-        <View>
+      <TouchableOpacity
+        onPress={onpress}
+        style={{}}
+      >
+        <ContentCard>
+          <View>
             <Title>{title}</Title>
             <SubTitle>{subTitle}</SubTitle>
-        </View>
+          </View>
           <Image
-           source={imageValue}
-           style={{width:100, height:80}}
-           resizeMode='contain'
+            source={imageValue}
+            style={{ width: 100, height: 80 }}
+            resizeMode='contain'
           />
-        <MaterialIcons
-          name='arrow-right'
-          size={40}
-          color="#000000"
-        />
+          <MaterialIcons
+            name='chevron-right'
+            size={40}
+            color="#008C8B"
+          />
 
-       </ContentCard>
+        </ContentCard>
       </TouchableOpacity>
     </>
   )

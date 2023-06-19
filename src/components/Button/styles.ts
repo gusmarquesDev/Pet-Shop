@@ -29,7 +29,8 @@ margin:10px;
 justify-content: center;
 align-items: center;
 padding: 16px 32px;
-background: ${bg ? bg : '#000'};
-border: ${border ? border : '#770FDF'};
+border-radius:7px;
+background-color: ${bg ? bg : '#009CA5'};
+border: ${border ? border : '#009CA5'};
 color: ${color ? color : '#fff'};
 `}`

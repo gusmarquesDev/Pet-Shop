@@ -1,8 +1,8 @@
 import axios, { AxiosHeaders, AxiosResponse } from "axios";
 
-import { PokemonData } from "./typesApi";
+import { UsersApi } from "./typesApi";
 
-const api = "https://jsonplaceholder.typicode.com/";
+const api = "https://jsonplaceholder.typicode.com";
 
 const apiPoker = axios.create({
   baseURL: `${api}`,
@@ -11,6 +11,7 @@ const apiPoker = axios.create({
 export const apis = {
   get: axios.get,
 
-  getPokemons: async () =>
-    apiPoker.get<PokemonData>("/pokemon?limit=20&offset=0"),
+  getUsers: async () =>
+   apiPoker.get<UsersApi>("/users/1"),
+  
 };

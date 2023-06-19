@@ -1,16 +1,14 @@
-import React, { PropsWithChildren, useContext } from 'react'
-import { View, Text } from 'react-native'
+import React from 'react'
 import { ContainerButton, LabelButton, } from './styles'
-import { StyledComponentProps } from 'styled-components/dist/types'
 interface ButtonProps {
     valueButton: string;
     onpress?: () => void
-    bg: string
+    bg?: string
     color: string
-    border: string
-    disable:any
+    border?: string
+    disable?:any
 }
-export const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
+export const Button: React.FC<ButtonProps> = ({
     valueButton,
     bg,
     color,
