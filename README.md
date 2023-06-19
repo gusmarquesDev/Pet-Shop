@@ -22,7 +22,7 @@ classificar os itens listados com um simples arrasta e puxa.
 
 <img width="165" alt="home" src="https://github.com/gusmarquesDev/Pet-Shop/assets/116916845/5439f317-e844-44ef-af69-554281bb3082">
 <img width="165" alt="home_down" src="https://github.com/gusmarquesDev/Pet-Shop/assets/116916845/ec1919c2-9d79-40f2-b2ea-16056c7bc8fb">
-<img width="165" alt="perfil" src="https://github.com/gusmarquesDev/Pet-Shop/assets/116916845/54edcd9c-a948-48ca-88a0-a1b3a2e54597">
+<img width="165" alt="shop" src="https://github.com/gusmarquesDev/Pet-Shop/assets/116916845/a7cb7625-2846-4e76-abe8-f1f1d656d021">
 <img width="165" alt="productDetail" src="https://github.com/gusmarquesDev/Pet-Shop/assets/116916845/2d12dee7-38ae-44ec-9d42-41718f6ad514">
 <img width="165" alt="productDetail_donw" src="https://github.com/gusmarquesDev/Pet-Shop/assets/116916845/1bbc3acc-d125-4341-92ad-9f5f17ecce3c">
 <img width="165" alt="perfil" src="https://github.com/gusmarquesDev/Pet-Shop/assets/116916845/54edcd9c-a948-48ca-88a0-a1b3a2e54597">
