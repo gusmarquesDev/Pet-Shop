@@ -6,7 +6,7 @@
 
 ## Algumas especificações 📝
 
-- O aplicativo foi desenvolvido utilizando o Expo.
+- O aplicativo foi desenvolvido utilizando o Expo com typeScript.
 - ao clonar o projeto, rodar "yarn install" para instalar todas depedências. 
 
 ## Pacotes utilizados
@@ -14,7 +14,8 @@
 - Lottie React Native
 - React Nativigation Bottom
 - React Navigation Stack 
-- axios
+- Axios
+- Styled Components
 ---
 
 ## Telas Vertical
