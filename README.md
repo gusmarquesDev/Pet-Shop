@@ -2,8 +2,7 @@
 
 ## Sobre o App 📱
 - Pet Shop App é uma recriação de um grande aplicativo de Pet Shop Nacional.
-- Sortable Contact list é um aplicativo de listagem feito com React Native, ele possui animações em sua rolagem de lista e é possivel 
-classificar os itens listados com um simples arrasta e puxa. 
+
 
 ## Algumas especificações 📝
 
